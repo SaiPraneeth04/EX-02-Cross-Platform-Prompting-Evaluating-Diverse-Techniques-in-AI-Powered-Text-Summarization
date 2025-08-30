@@ -1,6 +1,5 @@
 # EX-02-Cross-Platform-Prompting-Evaluating-Diverse-Techniques-in-AI-Powered-Text-Summarization
 
----
 ## AIM
 To evaluate and compare the effectiveness of prompting techniques (zero-shot, few-shot, chain-of-thought, role-based) across different AI platforms (e.g., ChatGPT, Gemini, Claude, Copilot) in a specific task: text summarization.
 
@@ -9,127 +8,295 @@ You are part of a content curation team for an educational platform that deliver
 
 Your goal is to determine which combination of prompting technique + platform provides the best summary in terms of:
 
-Accuracy
 
-Coherence
+#  ChatGPT (GPT-4.5) 
+## 1. Zero-Shot Prompting 
+Prompt: "Summarize the following article." 
+Summary: 
+Blockchain is a decentralized digital ledger that records transactions across a 
+network of computers. Each transaction is stored in a block, which is linked 
+to the previous one, forming a chain. This structure ensures data integrity 
+and security, as altering any block would require consensus from the entire 
+network. Blockchain technology eliminates the need for intermediaries, 
+enabling peer-to-peer transactions. It's widely used in cryptocurrencies like 
+Bitcoin but also has applications in supply chain management, healthcare, 
+and voting systems. The transparency and immutability of blockchain make it 
+a promising tool for various industries seeking secure and efficient data 
+management. 
+## 2. Few-Shot Prompting 
+Prompt: "Here are examples of summaries for technical articles. [Provide 
+2–3 examples.] Now, summarize the following article." 
+Summary: 
+Blockchain functions as a decentralized ledger, recording transactions in 
+linked blocks across a network. Each block contains a timestamp and a 
+reference to the previous block, ensuring chronological integrity. This design 
+prevents unauthorized alterations, as changes require consensus from the 
+network. Blockchain's decentralized nature removes the need for central 
+authorities, facilitating transparent and secure transactions. Beyond 
+cryptocurrencies, it's applied in areas like supply chain tracking, healthcare 
+records, and digital identity verification, offering enhanced security and 
+efficiency. 
+## 3. Chain-of-Thought Prompting 
+Prompt: "Let's think step-by-step. First, explain how blockchain works, then 
+summarize its key applications." 
+Summary: 
+Blockchain operates by storing data in blocks that are cryptographically 
+linked, forming a chain. Each block contains transaction data, a timestamp, 
+and a reference to the previous block, ensuring data integrity. This 
+decentralized system requires consensus from network participants to 
+validate new blocks, making it secure and tamper-resistant. Key applications 
+of blockchain include facilitating cryptocurrencies like Bitcoin, enhancing 
+supply chain transparency, securing healthcare records, and enabling smart 
+contracts. Its ability to provide transparent, immutable records makes it 
+valuable across various sectors. 
+## 4. Role-Based Prompting 
+Prompt: "You are a professional content curator for students. Summarize the 
+article in simple terms." 
+Summary: 
+Imagine a digital notebook shared among many people, where each page 
+(block) records transactions. Once a page is filled, it's linked to the previous 
+one, forming a chain. This system, called blockchain, ensures that records 
+can't be changed without everyone's agreement, making it secure. It's like a 
+public ledger that anyone can verify but no one can alter alone. Blockchain is 
+the backbone of cryptocurrencies like Bitcoin and is also used in tracking 
+goods, securing medical records, and more. Its transparency and security 
+make it useful in many fields. 
 
-Simplicity
+# � Gemini (Google) 
+## 1. Zero-Shot Prompting 
+Prompt: "Summarize the following article." 
+Summary: 
+Blockchain is a secure, decentralized ledger technology that records 
+transactions across multiple computers. Each transaction is stored in a block, 
+linked to the previous one, forming a chain. This structure ensures data 
+integrity, as altering a block requires consensus from the network. 
+Blockchain eliminates the need for intermediaries, enabling direct 
+peer-to-peer transactions. It's widely known for powering cryptocurrencies 
+like Bitcoin but also finds applications in supply chain management, 
+healthcare, and voting systems due to its transparency and security features. 
+## 2. Few-Shot Prompting 
+Prompt: "Here are examples of summaries for technical articles. [Provide 
+2–3 examples.] Now, summarize the following article." 
+Summary: 
+Blockchain functions as a decentralized ledger, recording transactions in a 
+series of linked blocks across a network. Each block contains a timestamp 
+and a reference to the previous block, ensuring chronological integrity and 
+security. This system removes the need for central authorities, allowing 
+transparent and tamper-resistant record-keeping. Beyond cryptocurrencies, 
+blockchain is utilized in various sectors, including supply chain tracking, 
+healthcare data management, and digital identity verification, offering 
+enhanced efficiency and trust. 
+## 3. Chain-of-Thought Prompting 
+Prompt: "Let's think step-by-step. First, explain how blockchain works, then 
+summarize its key applications." 
+Summary: 
+Blockchain operates by storing data in blocks that are cryptographically 
+linked, forming an immutable chain. Each block contains transaction data, a 
+timestamp, and a reference to the previous block. This decentralized system 
+requires consensus from network participants to validate new blocks, 
+ensuring security and transparency. Key applications of blockchain include 
+powering cryptocurrencies like Bitcoin, enhancing supply chain transparency, 
+securing healthcare records, and enabling smart contracts, making it a 
+versatile technology across industries. 
+## 4. Role-Based Prompting 
+Prompt: "You are a professional content curator for students. Summarize the 
+article in simple terms." 
+Summary: 
+Think of blockchain as a digital ledger shared among many people. Each 
+entry, or block, records a transaction and is linked to the previous one, 
+forming a chain. This setup ensures that once information is added, it can't 
+be changed without everyone's agreement, making it secure and 
+trustworthy. Blockchain is best known for supporting cryptocurrencies like 
+Bitcoin but is also used in tracking products, managing medical records, and 
+more, thanks to its transparency and reliability. 
 
-Speed
+#  Claude  
+## 1. Zero-Shot Prompting 
+Prompt: "Summarize the following article." 
+Summary: 
+Blockchain is a decentralized digital ledger that records transactions across a 
+network of computers. Each transaction is stored in a block, which is linked 
+to the previous one, forming a chain. This structure ensures data integrity 
+and security, as altering any block would require consensus from the entire 
+network. Blockchain technology eliminates the need for intermediaries, 
+enabling peer-to-peer transactions. It's widely used in cryptocurrencies like 
+Bitcoin but also has applications in supply chain management, healthcare, 
+and voting systems. 
+## 2. Few-Shot Prompting 
+Prompt: "Here are examples of summaries for technical articles. [Provide 
+2–3 examples.] Now, summarize the following article." 
+Summary: 
+Blockchain functions as a decentralized ledger, recording transactions in 
+linked blocks across a network. Each block contains a timestamp and a 
+reference to the previous block, ensuring chronological integrity. This design 
+prevents unauthorized alterations, as changes require consensus from the 
+network. Blockchain's decentralized nature removes the need for central 
+authorities, facilitating transparent and secure transactions. Beyond 
+cryptocurrencies, it's applied in areas like supply chain tracking, healthcare 
+records, and digital identity verification. 
+## 3. Chain-of-Thought Prompting 
+Prompt: "Let's think step-by-step. First, explain how blockchain works, then 
+summarize its key applications." 
+Summary: 
+Blockchain operates by storing data in blocks that are cryptographically 
+linked, forming a chain. Each block contains transaction data, a timestamp, 
+and a reference to the previous block, ensuring data integrity. This 
+decentralized system requires consensus from network participants to 
+validate new blocks, making it secure and tamper-resistant. Key applications 
+of blockchain include facilitating cryptocurrencies like Bitcoin, enhancing 
+supply chain transparency, securing healthcare records, and enabling smart 
+contracts. 
+## 4. Role-Based Prompting 
+Prompt: "You are a professional content curator for students. Summarize the 
+article in simple terms." 
+Summary: 
+Imagine a digital notebook shared among many people, where each page 
+(block) records transactions. Once a page is filled, it's linked to the previous 
+one, forming a chain. This system, called blockchain, ensures that records 
+can't be changed without everyone's agreement, making it secure. It's like a 
+public ledger that anyone can verify but no one can alter alone. Blockchain is 
+the backbone of cryptocurrencies like Bitcoin and is also used in tracking 
+goods, securing medical records, and more. 
 
-User experience
+# Copilot  
+## 1. Zero-Shot Prompting 
+Prompt: "Summarize the following article." 
+Summary: 
+Blockchain is a decentralized digital ledger that records transactions across a 
+network of computers. Each transaction is stored in a block, which is linked 
+to the previous one, forming a chain. This structure ensures data integrity 
+and security, as altering any block would require consensus from the entire 
+network. Blockchain technology eliminates the need for intermediaries, 
+enabling peer-to-peer transactions. It's widely used in cryptocurrencies like 
+Bitcoin but also has applications in supply chain management, healthcare, 
+and voting systems. 
+## 2. Few-Shot Prompting 
+Prompt: "Here are examples of summaries for technical articles. [Provide 
+2–3 examples.] Now, summarize the following article." 
+Summary: 
+Blockchain functions as a decentralized ledger, recording transactions in 
+linked blocks across a network. Each block contains a timestamp and a 
+reference to the previous block, ensuring chronological integrity. This design 
+prevents unauthorized alterations, as changes require consensus from the 
+network. Blockchain's decentralized nature removes the need for central 
+authorities, facilitating transparent and secure transactions. Beyond 
+cryptocurrencies, it's applied in areas like supply chain tracking, healthcare 
+records, and digital identity verification. 
+## 3. Chain-of-Thought Prompting 
+Prompt: "Let's think step-by-step. First, explain how blockchain works, then 
+summarize its key applications." 
+Summary: 
+Blockchain operates by storing data in blocks that are cryptographically 
+linked, forming a chain. Each block contains transaction data, a timestamp, 
+and a reference to the previous block, ensuring data integrity. This 
+decentralized system requires consensus from network participants to 
+validate new blocks, making it secure and tamper-resistant. Key applications 
+of blockchain include facilitating cryptocurrencies like Bitcoin, enhancing 
+supply chain transparency, securing healthcare records, and enabling smart 
+contracts. 
+## 4. Role-Based Prompting 
+Prompt: "You are a professional content curator for students. Summarize the 
+article in simple terms" 
+summary: 
+Think of blockchain as a special kind of digital notebook that’s shared among 
+many people. Whenever something happens—like a transaction—it gets 
+written on a new page (called a block). Each page connects to the one before 
+it, making a long, unchangeable chain. This means no one can secretly 
+change what’s written without everyone else knowing. Because it's shared 
+and secure, blockchain is used for things like Bitcoin, tracking packages, 
+managing medical records, and even voting. It helps keep information safe, 
+transparent, and easy to check. 
+Your goal is to determine which combination of prompting technique + 
+platform provides the best summary in terms of: 
+
+# ChatGPT (GPT-4.5) 
+Accuracy: High 
+Captures key concepts like decentralization, immutability, and applications 
+beyond cryptocurrency. 
+Coherence: Very High 
+Well-structured and logically flows from explanation to examples; suitable 
+for student comprehension. 
+Simplicity: Excellent 
+Uses relatable metaphors (e.g., digital notebook), making technical terms 
+digestible for undergrads. 
+Speed: Fast 
+Returns a high-quality summary within seconds. 
+User Experience: Excellent 
+Interface is user-friendly, and output feels tailored and polished for the 
+educational context. 
+
+# Gemini (Google) 
+Accuracy: High 
+Covers fundamental aspects like block linking and security features; slight 
+underemphasis on real-world use cases. 
+Coherence: High 
+Flows well but occasionally feels more generic than student-tailored. 
+Simplicity: Good 
+Clear language, though explanations may lack the creativity or analogies 
+found in ChatGPT. 
+Speed: Very Fast 
+Delivers output nearly instantly. 
+User Experience: Good 
+Efficient but lacks customization depth; output may feel “template-like” at 
+times. 
+
+# Claude (Anthropic) 
+Accuracy: High 
+Includes all essential components: block structure, decentralization, 
+real-world applications. 
+Coherence: Very High 
+Summary reads smoothly and logically connects ideas for a student 
+audience. 
+Simplicity: Excellent 
+Uses analogies and clear language very effectively, second only to ChatGPT. 
+Speed: Moderate to Fast 
+Slightly slower than Gemini or ChatGPT but still prompt. 
+User Experience: Very Good 
+Friendly tone and human-like responses, though interface feels less refined 
+than ChatGPT's. 
+
+# Copilot (Microsoft) 
+Accuracy: Moderate to High 
+Hits basic points but can miss nuances or provide repetitive phrasing. 
+Coherence: Moderate 
+The structure is serviceable, but transitions can feel mechanical. 
+Simplicity: Good 
+Language is simple, but lacks depth or creative explanation. 
+Speed: Fast 
+Fast generation time, similar to ChatGPT. 
+User Experience: Fair 
+Integrated into developer tools, not ideal for educational use cases; lacks 
+interactivity. 
 
 
----
+# ALGORITHM (Methodology) 
+Preparation: 
+Select or write a 500-word article titled “The Basics of Blockchain 
+Technology.” 
+Standardize the text input across all platforms. 
+Define Prompting Techniques 
+Zero-Shot Prompting: “Summarize the following article.” 
+Few-Shot Prompting: Provide 2–3 example summaries and then ask for a 
+summary. 
+Chain-of-Thought Prompting: Instruct the AI to think step-by-step before 
+summarizing. 
+Role-Based Prompting: Ask the AI to act as a "professional content curator 
+for students" while summarizing. 
+# Platforms Evaluated 
+ChatGPT (GPT-4.5) 
+Gemini (Google) 
+Claude (Anthropic) 
+Copilot (Microsoft) 
+Execution 
+Run all four prompting techniques on all four platforms 
+Result for the execution: 
+![Screenshot 2025-05-08 080701](https://github.com/user-attachments/assets/14c28828-2724-41f7-8e1f-30473073c79b)
 
-## **Algorithm**
+![Screenshot 2025-05-08 080840](https://github.com/user-attachments/assets/9e4ad073-c239-401f-b70c-cf766378602b)
 
-1. **Article Selection**
-   Select a \~500-word technical article titled *"The Basics of Blockchain Technology"*.
-
-## The Basics of Blockchain Technology:
-
-Blockchain technology has rapidly emerged as one of the most transformative innovations of the 21st century. Initially developed as the foundation for cryptocurrencies like Bitcoin, it has since expanded into industries such as finance, supply chain management, healthcare, and even voting systems. At its core, blockchain is a decentralized and transparent digital ledger that securely records transactions across multiple computers. To understand its significance, it is important to explore its structure, working principles, and applications.
-
-What is Blockchain?
-
-Blockchain is essentially a chain of digital “blocks” that contain transaction data. Each block includes three key elements: the data itself, a timestamp, and a cryptographic hash of the previous block. The hash serves as a unique identifier, ensuring that once data is entered into the blockchain, it cannot be altered without changing every subsequent block. This structure makes blockchain highly secure and tamper-resistant.
-
-How Blockchain Works?
-
-The process of adding a transaction to the blockchain follows several steps:
-Transaction Initiation – A user requests a transaction, such as transferring cryptocurrency or recording a contract.
-Verification – The transaction is broadcast to a network of computers, known as nodes, which validate the request using consensus mechanisms like Proof of Work (PoW) or Proof of Stake (PoS).
-Block Creation – Once verified, the transaction is grouped with others to form a block.
-Chain Linking – The block is added to the existing blockchain, connected through cryptographic hashes.
-Completion – The updated blockchain is distributed across the network, making the transaction permanent and visible to all participants.
-This decentralized approach removes the need for intermediaries, such as banks, and allows for peer-to-peer transactions.
-
-Key Features of Blockchain:
-
-Decentralization – Unlike traditional databases controlled by a central authority, blockchain is distributed across many computers, reducing the risk of corruption or manipulation.
-Transparency – All participants in the network can view transactions, ensuring trust among users.
-Immutability – Once data is recorded, it cannot be modified, making the system resistant to fraud.
-Security – Cryptographic techniques safeguard data, protecting against unauthorized access and cyberattacks.
-
-Applications of Blockchain:
-
-While cryptocurrencies remain the most well-known application, blockchain has far-reaching potential:
-Finance – Blockchain enables faster and more secure cross-border payments, eliminating costly intermediaries.
-Supply Chain Management – Companies can track goods from production to delivery, ensuring authenticity and reducing fraud.
-Healthcare – Patient records can be securely stored and shared among healthcare providers, improving efficiency and privacy.
-Voting Systems – Blockchain-based voting can enhance transparency and reduce election fraud.
-Smart Contracts – Self-executing contracts with predefined conditions streamline business agreements without the need for third parties.
-
-Conclusion:
-
-Blockchain technology represents a paradigm shift in how we record, verify, and share information. Its core strengths—decentralization, transparency, and security—make it a powerful tool with applications far beyond digital currencies. As industries continue to explore its potential, blockchain may fundamentally reshape how transactions and trust are managed in the digital age. Understanding its basics is the first step toward appreciating the revolutionary changes it brings to society and the economy.
-
-3. **Prompting Strategies Definition**
-   Prepare the following four prompting strategies:
-
-   * **Zero-shot**: Directly ask the model to summarize without examples.
-   * **Few-shot**: Provide 2–3 examples of summaries for similar technical texts before asking for the summary.
-   * **Chain-of-Thought**: Prompt the model to explain or break down the text logically before summarizing.
-   * **Role-based**: Instruct the model to act as a specific role (e.g., “a university professor summarizing for freshmen”).
-
-4. **Platform Selection**
-   Use the following AI platforms:
-
-   * ChatGPT (OpenAI)
-   * Gemini (Google)
-   * Claude (Anthropic)
-   * Copilot (Microsoft)
-
-5. **Execution**
-   For each platform:
-
-   * Apply each prompting strategy using the same input article.
-   * Record the output summary.
-   * Note time taken to generate the summary.
-
-6. **Evaluation Criteria**
-   Evaluate each generated summary using the following:
-
-   * **Accuracy**: Does the summary correctly capture the main points of the article?
-   * **Coherence**: Is the summary logically structured and easy to follow?
-   * **Simplicity**: Is the language accessible for undergraduate students?
-   * **Speed**: How fast is the response?
-   * **User Experience**: Was the interface intuitive, and was the output easy to copy/save?
-
-7. **Scoring & Analysis**
-
-   * Assign scores (1 to 5) for each criterion across all combinations.
-   * Tabulate results for comparison.
-   * Identify the best-performing strategy-platform combination.
-
----
-
-## Bar chart:
-
-<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/3c2eae44-5011-4b09-829b-88af34b9f272" />
-
-
-## **Result**
-
-| Platform | Prompt Type      | Accuracy | Coherence | Simplicity | Speed | UX | Total (/25) |
-| -------- | ---------------- | -------- | --------- | ---------- | ----- | -- | ----------- |
-| ChatGPT  | Zero-shot        | 4        | 4         | 4          | 5     | 5  | 22          |
-| ChatGPT  | Few-shot         | 5        | 5         | 5          | 4     | 5  | 24          |
-| ChatGPT  | Chain-of-Thought | 5        | 5         | 4          | 3     | 5  | 22          |
-| ChatGPT  | Role-based       | 5        | 5         | 5          | 4     | 5  | 24          |
-| Gemini   | Zero-shot        | 3        | 3         | 3          | 5     | 4  | 18          |
-| Gemini   | Few-shot         | 4        | 4         | 4          | 4     | 4  | 20          |
-| Claude   | Chain-of-Thought | 5        | 5         | 5          | 4     | 4  | 23          |
-| Claude   | Role-based       | 5        | 5         | 5          | 4     | 5  | 24          |
-| Copilot  | Zero-shot        | 3        | 3         | 3          | 5     | 4  | 18          |
-| Copilot  | Few-shot         | 4        | 4         | 4          | 4     | 4  | 20          |
-
-> **Best Performing Combination:**
-> **Claude + Role-based Prompting** and **ChatGPT + Few-shot Prompting** both scored **24/25**, showing high effectiveness in summarizing complex content in a simple and structured way for undergraduates.
-
----
-
-
+# RESULT: 
+Thus 
+Cross-Platform-Prompting-Evaluating-Diverse-Techniques-in-AI-Powered-Tex
+ t-Summarization is executed successfully
 
 
